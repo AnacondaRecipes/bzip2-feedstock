@@ -21,7 +21,7 @@ build:
 requirements:
   build:
     - python  # [win]
-    - toolchain
+    - {{ compiler('c') }}
 
 test:
   requires:
@@ -75,3 +75,4 @@ extra:
     - jjhelmus
     - pelson
     - jlanga
+    - mingwandroid
