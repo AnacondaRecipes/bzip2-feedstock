@@ -2,13 +2,12 @@
 
 # toolchain flags + bzip flags + fpic
 export CFLAGS="${CFLAGS} -Wall -Winline -O2 -g -D_FILE_OFFSET_BITS=64 -fPIC"
-
 USED_CC=${GCC:-${CC}}
 make install PREFIX=${PREFIX} CFLAGS="${CFLAGS}" CC="${USED_CC}"
 
 # build shared library
 if [[ ${HOST} =~ .*linux.* ]]; then
-  make -f Makefile-libbz2_so CFLAGS="${CFLAGS}" CC="${USED_GCC}"
+  make -f Makefile-libbz2_so CFLAGS="${CFLAGS}" CC="${USED_CC}"
   ln -s libbz2.so.${PKG_VERSION} libbz2.so
   cp -d libbz2.so* ${PREFIX}/lib/
 elif [[ ${HOST} =~ .*darwin.* ]]; then
