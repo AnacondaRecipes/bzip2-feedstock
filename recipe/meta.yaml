@@ -16,6 +16,8 @@ build:
   number: 1
   features:
     - vc{{ vc }} # [win]
+  run_exports:
+    - {{ pin_subpackage('bzip2') }}
 
 requirements:
   build:
@@ -74,3 +76,4 @@ extra:
     - pelson
     - jlanga
     - mingwandroid
+    - msarahan
