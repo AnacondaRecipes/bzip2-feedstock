@@ -13,9 +13,7 @@ source:
     - 0001-cross.patch
 
 build:
-  number: 1
-  features:
-    - vc{{ vc }} # [win]
+  number: 2
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -25,8 +23,6 @@ requirements:
     - jom  # [win]
 
 test:
-  requires:
-    - python {{ os.environ.get('PY_VER', '') + '*' }}  # [win]
   commands:
     - bzip2 --help  # [unix]
     {% set bzip2_executables = [
