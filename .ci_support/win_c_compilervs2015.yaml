@@ -1,0 +1,4 @@
+bzip2:
+- '1.0'
+c_compiler:
+- vs2015
