@@ -13,7 +13,7 @@ source:
     - 0001-cross.patch
 
 build:
-  number: 4
+  number: 5
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -21,8 +21,12 @@ requirements:
   build:
     - {{ compiler('c') }}
     - jom  # [win]
+    - make                  # [unix]
 
 test:
+  downstreams:
+    - libarchive
+    - libnetcdf
   commands:
     - bzip2 --help  # [unix]
     {% set bzip2_executables = [
