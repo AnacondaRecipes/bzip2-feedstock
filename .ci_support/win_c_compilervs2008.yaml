@@ -1,4 +1,7 @@
-bzip2:
-- '1.0'
 c_compiler:
 - vs2008
+libnetcdf:
+- '4.5'
+pin_run_as_build:
+  libnetcdf:
+    max_pin: x.x
