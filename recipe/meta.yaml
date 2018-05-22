@@ -21,7 +21,8 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
-    - jom  # [win]
+    - jom   # [win]
+    - make  # [unix]
 
 test:
   commands:
