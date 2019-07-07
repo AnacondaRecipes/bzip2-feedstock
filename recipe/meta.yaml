@@ -1,19 +1,17 @@
-{% set version = "1.0.6" %}
+{% set version = "1.0.7" %}
 
 package:
   name: bzip2
   version: {{ version }}
 
 source:
-  fn: bzip2-{{ version }}.tar.gz
-  url: https://web.archive.org/web/20180624184835/http://www.bzip.org/{{ version }}/bzip2-{{ version }}.tar.gz
-  md5: 00b516f4704d4a7cb50a1d97e6e8e15b
+  url: https://sourceware.org/pub/bzip2/bzip2-{{ version }}.tar.gz
+  sha512: e0e19b493e6b1f7beeb0eeb0be8a6358c24202173f28acb1e902a768835be9e24f2cb966452fbc90fc3e4e692532ce0c7e86d06aef2d52c0d2a9ac16e12ec8c8   
   patches:
     - 0001-cross.patch
-    - bzip2recover-CVE-2016-3189.patch
 
 build:
-  number: 6
+  number: 0
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
