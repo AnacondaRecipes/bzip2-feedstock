@@ -17,6 +17,8 @@ build:
 
 requirements:
   build:
+    - m2-patch  # [win]
+    - patch  # [not win]
     - {{ compiler('c') }}
     - jom   # [win]
     - make  # [unix]
