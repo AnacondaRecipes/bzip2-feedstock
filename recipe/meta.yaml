@@ -17,9 +17,10 @@ build:
 
 requirements:
   build:
-    - m2-patch  # [win]
-    - patch  # [not win]
     - {{ compiler('c') }}
+    - m2-patch  # [win]
+    - m2-gcc-libs  # [win]
+    - patch  # [not win]
     - jom   # [win]
     - make  # [unix]
 
