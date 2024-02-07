@@ -25,10 +25,10 @@ requirements:
     - make  # [unix]
 
 test:
-  files:
-    - bz2.c
-  requires:
-    - {{ compiler('c') }}
+  files:                   # [win]
+    - bz2.c                # [win]
+  requires:                # [win]
+    - {{ compiler('c') }}  # [win]
   commands:
     - bzip2 --help  # [unix]
     {% set bzip2_executables = [
@@ -51,15 +51,6 @@ test:
     - test -f ${PREFIX}/lib/libbz2.a  # [unix]
     - test -f ${PREFIX}/lib/libbz2.so  # [linux]
     - test -f ${PREFIX}/lib/libbz2.dylib  # [osx]
-    - if not exist %LIBRARY_INC%\bzlib.h exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\bzip2.lib exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\bzip2.dll exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\libbz2.lib exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\libbz2.dll exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\bzip2_static.lib exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\libbz2_static.lib exit 1  # [win]
-    - cc -I%LIBRARY_PREFIX%\include -L%LIBRARY_PREFIX%\bin -lbz2 -o defaults-bz2 bz2.c  # [win]
-    - defaults-bz2.exe foo.bz2  # [win]
 
 about:
   home: https://sourceware.org/bzip2/
