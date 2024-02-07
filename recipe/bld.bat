@@ -3,12 +3,9 @@
 REM edited from the one from Anaconda
 
 REM Build step
-nmake -f makefile.msc
 jom -f makefile.msc lib bzip2
 if errorlevel 1 exit 1
 
-
-dir
 
 REM Install step
 copy libbz2.lib %LIBRARY_LIB%\libbz2_static.lib || exit 1
@@ -24,3 +21,5 @@ REM Some packages expect 'bzip2.lib', so make copies
 copy libbz2.lib %LIBRARY_LIB%\bzip2.lib || exit 1
 copy libbz2.dll %LIBRARY_BIN% || exit 1
 copy libbz2.dll %LIBRARY_BIN%\bzip2.dll || exit 1
+
+copy *.exe %LIBRARY_BIN% || exit 1
