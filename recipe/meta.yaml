@@ -58,7 +58,7 @@ test:
     - if not exist %LIBRARY_BIN%\libbz2.dll exit 1  # [win]
     - if not exist %LIBRARY_LIB%\bzip2_static.lib exit 1  # [win]
     - if not exist %LIBRARY_LIB%\libbz2_static.lib exit 1  # [win]
-    - %CC% -I%LIBRARY_PREFIX%\include -L%LIBRARY_PREFIX%\bin -lbz2 -o defaults-bz2 bz2.c  # [win]
+    - cc -I%LIBRARY_PREFIX%\include -L%LIBRARY_PREFIX%\bin -lbz2 -o defaults-bz2 bz2.c  # [win]
     - defaults-bz2.exe foo.bz2  # [win]
 
 about:
