@@ -7,6 +7,9 @@ nmake -f makefile.msc
 jom -f makefile.msc lib bzip2
 if errorlevel 1 exit 1
 
+
+dir
+
 REM Install step
 copy libbz2.lib %LIBRARY_LIB%\libbz2_static.lib || exit 1
 REM Some packages expect 'bzip2.lib', so make another copy
