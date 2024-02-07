@@ -21,7 +21,7 @@ requirements:
     - m2-patch  # [win]
     - m2-gcc-libs  # [win]
     - patch  # [not win]
-    #- jom   # [win]
+    - jom   # [win]
     - make  # [unix]
 
 test:
@@ -59,7 +59,7 @@ about:
   home: http://www.bzip.org/
   license_family: BSD
   license_file: LICENSE
-  license: bzip2
+  license: bzip2-1.0.6
   summary: high-quality data compressor
   description: |
     Bzip2 is a freely available high-quality data compressor. It typically
