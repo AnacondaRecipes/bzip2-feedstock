@@ -16,3 +16,14 @@ len(data) / len(c)  # Data compression ratio
 
 d = bz2.decompress(c)
 data == d  # Check equality to original object after round-trip
+
+
+with bz2.open("myfile.bz2", "wb") as f:
+    # Write compressed data to file
+    unused = f.write(data)
+
+with bz2.open("myfile.bz2", "rb") as f:
+    # Decompress data from file
+    content = f.read()
+
+content == data
