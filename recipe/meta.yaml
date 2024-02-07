@@ -25,6 +25,10 @@ requirements:
     - make  # [unix]
 
 test:
+  files:
+    - bz2.c
+  requires:
+    - {{ compiler('c') }}
   commands:
     - bzip2 --help  # [unix]
     {% set bzip2_executables = [
@@ -47,16 +51,18 @@ test:
     - test -f ${PREFIX}/lib/libbz2.a  # [unix]
     - test -f ${PREFIX}/lib/libbz2.so  # [linux]
     - test -f ${PREFIX}/lib/libbz2.dylib  # [osx]
-    - if not exist %LIBRARY_INC%\\bzlib.h exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\\bzip2.lib exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\\bzip2.dll exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\\libbz2.lib exit 1  # [win]
-    - if not exist %LIBRARY_BIN%\\libbz2.dll exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\\bzip2_static.lib exit 1  # [win]
-    - if not exist %LIBRARY_LIB%\\libbz2_static.lib exit 1  # [win]
+    - if not exist %LIBRARY_INC%\bzlib.h exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\bzip2.lib exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\bzip2.dll exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\libbz2.lib exit 1  # [win]
+    - if not exist %LIBRARY_BIN%\libbz2.dll exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\bzip2_static.lib exit 1  # [win]
+    - if not exist %LIBRARY_LIB%\libbz2_static.lib exit 1  # [win]
+    - %CC% -I%LIBRARY_PREFIX%\include -L%LIBRARY_PREFIX%\bin -lbz2 -o defaults-bz2 bz2.c  # [win]
+    - defaults-bz2.exe foo.bz2  # [win]
 
 about:
-  home: http://www.bzip.org/
+  home: https://sourceware.org/bzip2/
   license_family: BSD
   license_file: LICENSE
   license: bzip2-1.0.6
@@ -66,7 +72,8 @@ about:
     compresses files to within 10% to 15% of the best available techniques,
     whilst being around twice as fast at compression and six times faster
     at decompression.
-  doc_url: http://www.bzip.org/docs.html
+  doc_url: https://sourceware.org/bzip2/docs.html
+  dev_url: https://sourceware.org/git/?p=bzip2.git
 
 extra:
   recipe-maintainers:
