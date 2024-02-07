@@ -1,7 +1,7 @@
 REM edited from the one from Anaconda
 
 REM Build step
-nmake -f makefile.msc libbz2
+nmake -f makefile.msc
 if errorlevel 1 exit 1
 
 REM Install step
