@@ -11,7 +11,7 @@ source:
     - 0001-cross.patch
 
 build:
-  number: 0
+  number: 1
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -21,7 +21,7 @@ requirements:
     - m2-patch  # [win]
     - m2-gcc-libs  # [win]
     - patch  # [not win]
-    - jom   # [win]
+    #- jom   # [win]
     - make  # [unix]
 
 test:

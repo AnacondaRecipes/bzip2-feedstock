@@ -1,7 +1,7 @@
 REM edited from the one from Anaconda
 
 REM Build step
-jom -f makefile.msc lib bzip2
+nmake -f makefile.msc libbz2
 if errorlevel 1 exit 1
 
 REM Install step
