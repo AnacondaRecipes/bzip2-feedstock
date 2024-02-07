@@ -7,8 +7,8 @@ package:
 source:
   url: https://sourceware.org/pub/bzip2/bzip2-{{ version }}.tar.gz
   sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
-  patches:
-    - 0001-cross.patch
+  patches:  # [not win]
+    - 0001-cross.patch  # [not win]
 
 build:
   number: 1
@@ -19,7 +19,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - m2-patch  # [win]
-    - m2-gcc-libs  # [win]
+    #- m2-gcc-libs  # [win]
     - patch  # [not win]
     - jom   # [win]
     - make  # [unix]
@@ -29,7 +29,6 @@ test:
     - bz2.c                # [win]
   requires:                # [win]
     - {{ compiler('c') }}  # [win]
-    - python  # [win]
   commands:
     - bzip2 --help  # [unix]
     {% set bzip2_executables = [
