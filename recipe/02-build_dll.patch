@@ -30,4 +30,4 @@
 +	del libbz2-static.lib
  	del bzip2.exe
  	del bzip2recover.exe
- 	del sample1.rb2 
+ 	del sample1.rb2

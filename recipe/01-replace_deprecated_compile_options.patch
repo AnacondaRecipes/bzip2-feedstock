@@ -17,4 +17,3 @@
  .c.obj: 
 -	$(CC) $(CFLAGS) -c $*.c -o $*.obj
 +	$(CC) $(CFLAGS) -c $*.c /Fo$*.obj
- 
