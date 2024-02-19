@@ -2,6 +2,9 @@
 
 REM edited from the one from Anaconda
 
+set BZIP2=
+set BZIP=
+
 REM Build step
 jom -f makefile.msc all
 if errorlevel 1 exit 1
