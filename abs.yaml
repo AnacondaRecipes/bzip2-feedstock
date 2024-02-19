@@ -1,2 +1,3 @@
 build_parameters:
-  - ""
+  - "--no-error-overlinking"
+  - "--no-error-overdepending"
