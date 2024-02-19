@@ -33,7 +33,7 @@ index 799a18a..0e0bc85 100644
 -	$(CC) $(CFLAGS) -o bzip2 bzip2.c libbz2.lib setargv.obj
 -	$(CC) $(CFLAGS) -o bzip2recover bzip2recover.c
 +bzip2: dll
-+	$(CC) $(CFLAGS) /Febzip2 bzip2.c libbz2.lib setargv.obj
++	$(CC) $(CFLAGS) /I bzlib.h /Febzip2 bzip2.c libbz2.lib setargv.obj
 +	$(CC) $(CFLAGS) /Febzip2recover bzip2recover.c
 +
 +dll: $(OBJS) libbz2.def
