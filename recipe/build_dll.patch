@@ -37,7 +37,7 @@ index 799a18a..0e0bc85 100644
 +	$(CC) $(CFLAGS) /Febzip2recover bzip2recover.c
 +
 +dll: $(OBJS) libbz2.def
-+  link /dll /implib:libbz2.lib /out:LIBBZ2.dll /def:libbz2.def $(OBJS)
++  link /dll /subsystem:WINDOWS /implib:libbz2.lib /out:LIBBZ2.dll /def:libbz2.def $(OBJS)
  
  lib: $(OBJS)
 -	lib /out:libbz2.lib $(OBJS)
