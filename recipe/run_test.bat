@@ -14,7 +14,7 @@ bzip2.exe -zv foo.txt
 
 ::bzip2.exe -dc foo.txt.bz2
 
-%CC% /Tc bz2.c /I %CONDA_PREFIX%\Library\include /link /LIBPATH:"%CONDA_PREFIX%\Library\lib" libbz2.lib /out:defaults-bz2.exe
+%CC% /Tc bz2.c /I %CONDA_PREFIX%\Library\include /link /LIBPATH:"%CONDA_PREFIX%\Library\lib" /dll /implib:libbz2.lib /out:defaults-bz2.exe bz2.obj
 if errorlevel 1 exit /B 1
 
 defaults-bz2.exe foo.txt.bz2
