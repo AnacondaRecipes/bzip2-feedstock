@@ -12,6 +12,8 @@ if not exist %LIBRARY_BIN%\bzip2.exe exit 1
 
 echo "hello world" >foo
 bzip2.exe -zv foo
+dir
+bzip2.exe -dc foo.bz2
 
 ::bzip2.exe -dc foo.txt.bz2
 
