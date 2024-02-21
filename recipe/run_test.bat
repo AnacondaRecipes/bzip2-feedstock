@@ -17,7 +17,7 @@ bzip2.exe -dc foo.bz2
 
 ::bzip2.exe -dc foo.txt.bz2
 
-%CC% -o bz2 bz2.c /I%PREFIX%\Library\include\ /link /MD /LIBPATH:"%PREFIX%\Library\lib" libbz2.lib
+%CC% /MD /Febz2 bz2.c /I%PREFIX%\Library\include\ /link /LIBPATH:"%PREFIX%\Library\lib" libbz2.lib
 if errorlevel 1 exit /B 1
 
 ldd bz2.exe
