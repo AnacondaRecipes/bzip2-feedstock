@@ -18,5 +18,7 @@ bzip2.exe -zv foo
 %CC% -o bz2 bz2.c /I%PREFIX%\Library\include\ /link /LIBPATH:"%PREFIX%\Library\lib" libbz2.lib
 if errorlevel 1 exit /B 1
 
+ldd bz2.exe
+
 bz2 foo.bz2
 if errorlevel 1 exit /B 1
