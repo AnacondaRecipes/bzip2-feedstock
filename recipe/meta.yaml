@@ -23,7 +23,7 @@ requirements:
     - m2-patch  # [win]
     #- m2-gcc-libs  # [win]
     - patch  # [not win]
-    - jom   # [win]
+    #- jom   # [win]
     - make  # [unix]
 
 test:

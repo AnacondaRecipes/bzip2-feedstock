@@ -9,6 +9,8 @@ REM Build step
 nmake -f makefile.msc
 if errorlevel 1 exit 1
 
+dir
+where libbz2.dll
 
 REM Install step
 copy libbz2_static.lib %LIBRARY_LIB% || exit 1
