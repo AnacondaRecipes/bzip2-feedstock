@@ -32,12 +32,12 @@ index 799a18a..0e0bc85 100644
 -bzip2: lib
 -	$(CC) $(CFLAGS) -o bzip2 bzip2.c libbz2.lib setargv.obj
 -	$(CC) $(CFLAGS) -o bzip2recover bzip2recover.c
-+bzip2: dll
++bzip2: lib
 +	$(CC) $(CFLAGS) /Febzip2 bzip2.c libbz2.lib setargv.obj
 +	$(CC) $(CFLAGS) /Febzip2recover bzip2recover.c
 +
 +dll: $(OBJS) libbz2.def
-+  link /dll /subsystem:WINDOWS /implib:libbz2.lib /out:libbz2.dll /def:libbz2.def $(OBJS)
++  link /dll /implib:libbz2.lib /out:libbz2.dll /def:libbz2.def $(OBJS)
  
  lib: $(OBJS)
 -	lib /out:libbz2.lib $(OBJS)
