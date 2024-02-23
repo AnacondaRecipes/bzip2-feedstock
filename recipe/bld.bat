@@ -1,7 +1,7 @@
 @echo on
 
-REM Set empty variables to avoid an error because by defaults the value is "1.0",
-REM see https://github.com/AnacondaRecipes/aggregate/blob/0de119406a04fb8ba753524c6ac035c75c1fe2a7/conda_build_config.yaml#L16
+REM The bzip2 executable uses the environment variables BZIP2 and BZIP to initialise its ArgList
+REM conda sets these values from conda_build_config.yaml and bzip2 tries to open a file called "1.0"
 set BZIP2=
 set BZIP=
 
