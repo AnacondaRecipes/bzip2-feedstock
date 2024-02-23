@@ -10,6 +10,8 @@ source:
   sha256: ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
   patches:
     - 0001-cross.patch  # [not win]
+    # 2024/2/23: build_dll.patch might not be required in future versions.
+    # Check it before building the next release.
     - build_dll.patch   # [win]
 
 build:
