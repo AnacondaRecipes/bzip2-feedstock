@@ -1,7 +1,7 @@
 From 170f403ee2355d71dd6bca6ff463b7c341ad04dc Mon Sep 17 00:00:00 2001
-From: Serhii Kupriienko <skupriienko@anaconda.com>
+From: Serhii Kupriienko
 Date: Mon, 12 Feb 2024 15:55:52 +0200
-Subject: [PATCH] fix
+Subject: [PATCH] fix the dll creation, remove DESCRIPTION
 
 ---
  libbz2.def   |  1 -
