@@ -1,0 +1,2 @@
+build_parameters:
+  - "--no-error-overlinking"
