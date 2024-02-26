@@ -1,7 +1,9 @@
 From 170f403ee2355d71dd6bca6ff463b7c341ad04dc Mon Sep 17 00:00:00 2001
 From: Serhii Kupriienko
 Date: Mon, 12 Feb 2024 15:55:52 +0200
-Subject: [PATCH] fix the dll creation, remove DESCRIPTION
+Subject: [PATCH] Fix the dll creation, remove DESCRIPTION.
+The following changes were taken from https://github.com/philr/bzip2-windows/tree/v1.0.8.0/patches.
+They are licensed under the MIT and Copyright (c) 2015-2019 Philip Ross.
 
 ---
  libbz2.def   |  1 -

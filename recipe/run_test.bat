@@ -20,7 +20,7 @@ REM Decompress the file
 bzip2.exe -dc foo.bz2
 if errorlevel 1 exit /B 1
 
-REM Compile bz2.c with the import library and /MD option, 
+REM Compile bz2.c with the import library and /MD option,
 REM see https://learn.microsoft.com/en-us/cpp/build/reference/md-mt-ld-use-run-time-library?view=msvc-170#remarks
 %CC% /MD /Febz2 bz2.c /I%PREFIX%\Library\include\ /link /LIBPATH:"%PREFIX%\Library\lib" libbz2.lib
 if errorlevel 1 exit /B 1

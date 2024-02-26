@@ -15,7 +15,7 @@ source:
     - build_dll.patch   # [win]
 
 build:
-  number: 1
+  number: 5
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
@@ -58,6 +58,9 @@ about:
   home: https://sourceware.org/bzip2/
   license_family: BSD
   license_file: LICENSE
+  # Important that the SPDX License List (https://spdx.org/licenses/) doesn't have the license name `bzip2-1.0.8` because only `bzip2-1.0.6` exists but it's incorrect.
+  # The real name must be `bzip2-1.0.8`,
+  # see the upstream LICENSE file https://sourceware.org/git/?p=bzip2.git;a=blob;f=LICENSE;h=81a37eab7a5be1a34456f38adb74928cc9073e9b;hb=9de658d248f9fd304afa3321dd7a9de1280356ec#l40
   license: bzip2-1.0.8
   summary: high-quality data compressor
   description: |
