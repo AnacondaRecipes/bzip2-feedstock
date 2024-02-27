@@ -47,7 +47,7 @@ test:
       "bzmore"
     ] %}
     {% for executable in bzip2_executables %}
-    - test -f ${PREFIX}/bin/{{ executable }}
+    - test -f ${PREFIX}/bin/{{ executable }}  # [unix]
     {% endfor %}
     - test -f ${PREFIX}/include/bzlib.h       # [unix]
     - test -f ${PREFIX}/lib/libbz2.a          # [unix]

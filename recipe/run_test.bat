@@ -10,6 +10,7 @@ if not exist %LIBRARY_BIN%\libbz2.dll exit 1
 if not exist %LIBRARY_LIB%\bzip2_static.lib exit 1
 if not exist %LIBRARY_LIB%\libbz2_static.lib exit 1
 if not exist %LIBRARY_BIN%\bzip2.exe exit 1
+if not exist %LIBRARY_BIN%\bzip2recover.exe exit 1
 
 echo "hello world" >foo
 REM Compress a file
