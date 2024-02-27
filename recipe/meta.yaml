@@ -31,7 +31,7 @@ test:
     - bz2.c                # [win]
   requires:                # [win]
     - {{ compiler('c') }}  # [win]
-  commands:                                 # [unix]
+  commands:
     - bzip2 --help
     {% set bzip2_executables = [
       "bunzip2",
