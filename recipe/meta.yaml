@@ -51,7 +51,7 @@ test:
     {% endfor %}
     - test -f ${PREFIX}/include/bzlib.h       # [unix]
     - test -f ${PREFIX}/lib/libbz2.a          # [unix]
-    - test -f ${PREFIX}/lib/libbz2.${SHLIB_EXT}        # [unix]
+    - test -f ${PREFIX}/lib/libbz2${SHLIB_EXT}        # [unix]
 
 about:
   home: https://sourceware.org/bzip2/
