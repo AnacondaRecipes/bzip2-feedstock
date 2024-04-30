@@ -15,7 +15,7 @@ source:
     - build_dll.patch   # [win]
 
 build:
-  number: 5
+  number: 6
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
