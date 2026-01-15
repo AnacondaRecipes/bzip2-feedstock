@@ -12,6 +12,11 @@ if not exist %LIBRARY_LIB%\libbz2_static.lib exit 1
 if not exist %LIBRARY_BIN%\bzip2.exe exit 1
 if not exist %LIBRARY_BIN%\bzip2recover.exe exit 1
 
+REM The bzip2 executable uses the environment variables BZIP2 and BZIP to initialise its ArgList
+REM conda sets these values from conda_build_config.yaml and bzip2 tries to open a file called "1.0"
+set BZIP2=
+set BZIP=
+
 echo "hello world" >foo
 REM Compress a file
 bzip2.exe -zv foo
