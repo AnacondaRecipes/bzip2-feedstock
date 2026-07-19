@@ -15,7 +15,7 @@ index 2dc0dd8..b8de2aa 100644
 --- a/libbz2.def
 +++ b/libbz2.def
 @@ -1,5 +1,4 @@
- LIBRARY			LIBBZ2
+ LIBRARY			libbz2
 -DESCRIPTION		"libbzip2: library for data compression"
  EXPORTS
  	BZ2_bzCompressInit

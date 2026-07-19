@@ -25,8 +25,5 @@ copy libbz2.dll %LIBRARY_BIN% || exit 1
 REM Some packages expect 'bzip2.dll', so make copies
 copy libbz2.dll %LIBRARY_BIN%\bzip2.dll || exit 1
 
-REM Copy also uppercased variant of the dll
-copy LIBBZ2.dll %LIBRARY_BIN%\LIBBZ2.dll || exit 1
-
 REM Copy exe files
 copy *.exe %LIBRARY_BIN% || exit 1
