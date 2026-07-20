@@ -1,3 +1,5 @@
 build_parameters:
+  - "--suppress-variables"
+  - "--skip-existing"
   # See https://github.com/conda/conda-build/issues/3650
-  - "--no-error-overlinking"
+  # - "--error-overlinking"
