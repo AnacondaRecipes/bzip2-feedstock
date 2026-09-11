@@ -21,8 +21,8 @@ build:
 
 requirements:
   build:
+    - {{ stdlib('c')}}
     - {{ compiler('c') }}
-    - patch                # [not win]
     - make                 # [unix]
 
 test:
