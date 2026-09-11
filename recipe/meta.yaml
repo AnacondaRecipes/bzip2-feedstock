@@ -15,14 +15,13 @@ source:
     - build_dll.patch   # [win]
 
 build:
-  number: 7
+  number: 8
   run_exports:
     - {{ pin_subpackage('bzip2') }}
 
 requirements:
   build:
     - {{ compiler('c') }}
-    - m2-patch             # [win]
     - patch                # [not win]
     - make                 # [unix]
 
